@@ -3,16 +3,7 @@ defmodule Tadot do
   Documentation for `Tadot`.
   """
 
-  @doc """
-  Hello world.
+  @version Mix.Project.config()[:version]
 
-  ## Examples
-
-      iex> Tadot.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def version, do: @version
 end
