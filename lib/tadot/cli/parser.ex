@@ -53,15 +53,15 @@ defmodule Tadot.CLI.Parser do
     |> map_internal_command_representation()
   end
 
-  defp map_internal_command_representation(["version"]) do
+  defp map_internal_command_representation(["/version"]) do
     {:version, %{}}
   end
 
-  defp map_internal_command_representation(["browse", url]) do
+  defp map_internal_command_representation(["/browse", url]) do
     {:browse, %{ url: url }}
   end
 
-  defp map_internal_command_representation(["spaghetti"]) do
+  defp map_internal_command_representation(["/spaghetti"]) do
     {:spaghetti, %{}}
   end
 end
