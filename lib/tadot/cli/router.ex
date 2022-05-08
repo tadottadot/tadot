@@ -43,6 +43,14 @@ defmodule Tadot.CLI.Router do
     }
   end
 
+  defp runnable_route({:browse, params}) do
+    %{
+      controller: Tadot.CLI.MainController,
+      action: :browse,
+      params: params
+    }
+  end
+
   defp runnable_route({:spaghetti, params}) do
     %{
       controller: Tadot.CLI.MainController,

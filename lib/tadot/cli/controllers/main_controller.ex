@@ -13,6 +13,12 @@ defmodule Tadot.CLI.MainController do
     {:ok, 200}
   end
 
+  def browse(_conv, %{ url: url } = _params) do
+    Tadot.CLI.Utils.browse(%{ url: url })
+
+    {:ok, 200}
+  end
+
   def spaghetti(_conv, _params) do
     IO.puts("Simulates error :spaghetti")
 
