@@ -2,7 +2,11 @@ defmodule TadotTest do
   use ExUnit.Case
   doctest Tadot
 
-  test "greets the world" do
-    assert Tadot.hello() == :world
+  describe "version/0" do
+    @version Mix.Project.config()[:version]
+
+    test "returns current version" do
+      assert Tadot.version() == @version
+    end
   end
 end
